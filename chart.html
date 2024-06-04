@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>各個洲從108年到112年學位生與非學位生數量比較</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 100%; height: 600px;"></div>
+    <script type="text/javascript">
+        var chart = echarts.init(document.getElementById('main'));
+
+        var option = {
+            title: {
+                text: '各個洲從108年到112年學位生與非學位生數量比較'
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'shadow'
+                }
+            },
+        
+            legend: {
+                data: ['108學位生', '108非學位生', '109學位生', '109非學位生', '110學位生', '110非學位生', '111學位生', '111非學位生', '112學位生', '112非學位生'],
+                top: '5%', 
+            },
+            xAxis: {
+                type: 'category',
+                data: ['亞洲', '大洋洲', '非洲', '歐洲', '美洲']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    name: '108學位生',
+                    type: 'bar',
+                    stack: '108',
+                    data: [110679, 1549, 1370, 7428, 7131]
+                },
+                {
+                    name: '108非學位生',
+                    type: 'bar',
+                    stack: '108',
+                    data: [51480, 1177, 392, 6707, 4871]
+                },
+                {
+                    name: '109學位生',
+                    type: 'bar',
+                    stack: '109',
+                    data: [81140, 590, 1228, 2686, 5251]
+                },
+                {
+                    name: '109非學位生',
+                    type: 'bar',
+                    stack: '109',
+                    data: [22850, 383, 249, 2036, 2990]
+                },
+                {
+                    name: '110學位生',
+                    type: 'bar',
+                    stack: '110',
+                    data: [82662, 762, 1443, 3386, 6326]
+                },
+                {
+                    name: '110非學位生',
+                    type: 'bar',
+                    stack: '110',
+                    data: [21619, 551, 442, 2647, 3937]
+                },
+                {
+                    name: '111學位生',
+                    type: 'bar',
+                    stack: '111',
+                    data: [89980, 1144, 1351, 6320, 7272]
+                },
+                {
+                    name: '111非學位生',
+                    type: 'bar',
+                    stack: '111',
+                    data: [27551, 916, 352, 5481, 4850]
+                },
+                {
+                    name: '112學位生',
+                    type: 'bar',
+                    stack: '112',
+                    data: [97743, 1051, 1541, 7273, 8430]
+                },
+                {
+                    name: '112非學位生',
+                    type: 'bar',
+                    stack: '112',
+                    data: [34902, 818, 452, 6443, 6124]
+                }
+            ]
+        };
+
+        chart.setOption(option);
+    </script>
+</body>
+</html>
